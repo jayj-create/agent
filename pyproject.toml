@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkedin-strategist"
+version = "1.0.0"
+description = "An AI-powered LinkedIn Content Strategist agent built with Claude"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.39.0",
+]
+
+[project.scripts]
+linkedin-strategist = "linkedin_strategist.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["linkedin_strategist*"]
